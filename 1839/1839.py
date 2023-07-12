@@ -1,0 +1,7 @@
+class Solution:
+    def longest_substring_of_all_vowels_in_order(self, n: int) -> int:
+        count = 0
+        while n:
+            count += n & 1
+            n >>= 1
+        return count
