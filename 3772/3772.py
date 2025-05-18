@@ -1,0 +1,6 @@
+class Solution:
+    def maximum_subgraph_score_in_a_tree(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev, cur = None, head
+        while cur:
+            cur.next, prev, cur = prev, cur, cur.next
+        return prev
